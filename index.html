@@ -12,6 +12,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <!-- Next, we pull in the A-Frame library -->
     <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@fb96ab2/dist/aframe-extras.min.js"></script>
     <!-- Next, we have the title of our page-->
     <title>A Basic A-Frame scene</title>
   </head>
@@ -29,13 +30,12 @@
     <a-scene>
       <!-- ## The scene
         Next, we initialize the camera 
-
         The code below specifies a camera that can be controlled with a keyboard
         and by looking around with a mouse. The camera is positioned inside a "rig".
         
         Let us not worry about the camera for now. A-Frame takes care of most of the setup for us.
       -->
-      <a-entity id="rig" wasd-controls position="0 0 0">
+      <a-entity id="rig" movement-controls position="0 0 0">
         <a-entity
           id="camera"
           camera="fov:55"
@@ -60,7 +60,6 @@
           - `position` is an A-Frame component; it tells us that the entity has a place in space (coordinates)
           - `rotation` is an A-Frame component; it tells us that the entity is rotated in space somehow (expressed using Euler angles)
           - `id` is **not** an A-Frame component; it is an HTML attribute; it specifies a unique identifier for the element
-
         Components/attributes come usually in name/value pairs.
         -->
 
@@ -137,7 +136,6 @@
       <!-- We add a sky (making it a more pleasant color than white) -->
       <!-- A-Frame has some pre-configured entities, called primitives, that can be invoked with a special tag. For example <a-sky> below. 
     Primitives are just convenience tags for preconfigured entities.
-
     For more information about primitives, see https://aframe.io/docs/1.4.0/introduction/html-and-primitives.html .
     For a complete list of premitives, see the `primitives` section in https://aframe.io/docs .
     -->
